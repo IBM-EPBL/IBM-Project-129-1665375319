@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth Zone ✅ - All you need to start !</title>
+    <link rel="icon" type="image/gif/png" href="../static/images/job_junction-logo-head.png">
+    <script src="https://kit.fontawesome.com/7bb9495e7b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/growthzonestyles.css') }}">
+    <script src="{{ url_for('static', filename='index.js') }}" defer></script>
+</head>
+<body id="body">
+
+    <div class="menu_icon" id="menu">
+        <div class="first_div"></div>
+        <div class="second_div"></div>
+        <div class="third_div"></div>
+    </div>
+
+    <header>
+        <div class="brand_box" style="cursor: pointer;">
+            <img onclick="location.href='/index';" src="{{url_for('static', filename='images/job_junction-main.png')}}" alt="Job Junction Logo" />
+        </div>
+        <nav>
+            <ul class="nav_links" id="nav_links">
+                <li class="nav_link"><a href="#">Growth Zone ✅</a></li>
+                <li class="nav_link"><a href="/jobs">Jobs 💼</a></li>
+                            {% if session['email'] %}
+                            <li class="nav_link special_link" id="special_link"><a href="/profile" id="contact_link">Your Profile 😎</a></li>
+                            {% else %}
+                            <li class="nav_link special_link" id="special_link"><a href="/register" id="contact_link">Login / Register</a></li>
+                            {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <div class="ourgrowths">
+        <div class="header">
+            <p class="head">Growth Zone ✅</p>
+            <p class="description">All resources in one place 🤯 from drawing to coding. Mostly for free 🤩</p>
+        </div>
+        <div class="body">
+
+            <!--CODING-->
+             <div class="head" style="text-align:center; margin-top:32px; width:100%;"></div>
+                <div class="growths">
+                    <div class="growth" style="cursor:pointer;">
+                        <p target="_blank" onclick="location.href=''" class="growth_title"> <span class="growth_category"></span></p>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+</body>    
